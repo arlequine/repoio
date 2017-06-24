@@ -1,0 +1,24 @@
+.col-lg-7.col-md-8.col-xs-12.col-sm-10.col-sm-11.no-float.center-block
+  %articule.card.big-padding
+    %header
+      %h1.peach-text.text-center= @product.name
+    %section
+      .col-xd-6.col-md-5.no-padding.inline-block
+        =image_tag @product.avatar.url
+      .col-md-1.inline-block.hidden-xs
+      .col-xs-5.col-md-6.inline-block.text-left
+        %h3.metal-text.bold.normal= @product.user.email
+        %h3.ion-text.bold.normal
+          precio:
+          %span.metal-text= "$#{@product.pricing}"
+        %h3.ion-text.bold.normal
+          Archivos:
+          %span.metal-text= "por hacer"
+        %h3.ion-text.bold.normal
+          Tamaño:
+          %span.metal-text= "por hacer"
+        =render "in_shopping_carts/form",product: @product
+    %section
+      %h3.peach-text.bold.normal Descripción
+      %p= @product.description
+      

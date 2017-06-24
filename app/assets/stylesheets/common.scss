@@ -1,0 +1,133 @@
+@import "bootstrap";
+
+$water-blue: #009688;
+$peach: #E74C3C;
+$metal-grey: #cfcfcf;
+$blue: #296DF4;
+$pink: #FF5F5C;
+$green: #2ecc71;
+$ion: #1ABC9C;
+
+/*texto*/
+.bold{
+    font-weight:bold;
+}
+/*Colores*/
+.ion{
+    background-color:#1ABC9C;
+}
+.ion-text{
+    color:#1ABC9C;
+}
+//_______________________________________
+.white{
+    background-color:white;
+}
+.white-text{
+    color:white;
+}
+
+//_______________________________________________+++++++++++++++++++++++++++++++++//
+
+.water-blue{
+    background-color:  $water-blue;
+}
+.water-text{
+     color: $water-blue;
+}
+//_______________________________________________++++++++++++++++++++++++++//
+.peach{
+    background-color:$peach;
+}
+.peach-text{
+    color:$peach;
+}
+//_______________________________________________+++++++++++++++++++++//
+.metal-grey{
+    background-color:$metal-grey;
+}
+.metal-text{
+    color:$metal-grey;
+}
+//_______________________________________________++++++++++++++//
+.blue{
+    background-color:$blue;
+}
+.blue-text{
+    color:$blue;
+}
+//_______________________________________________+++++++++//
+.pink{
+    background-color:$pink;
+}
+.pink-text{
+    color:$pink;
+}
+//_______________________________________________++++++//
+.green{
+    background-color:$green;
+}
+.green-text{
+    color:$green;
+}
+/*Margins*/
+.no-margin{
+    margin:none;
+}
+.big-top-space{
+    margin-top:70px;
+}
+.top-space{
+    margin-top:1em;
+}
+ .bottom-space{
+     margin-bottom:1em;
+ }
+/*Paddings*/
+
+.big-padding{
+    padding: 2em;
+}
+.no-padding{
+    padding:none;
+}
+.large-padding{
+    padding: 5px 10px;
+}
+
+
+/*Alinements*/
+.no-float{
+    float: none !important;
+}
+.in-top{
+    vertical-align:top !important;
+}
+.inline-block{
+    float:none !important;
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:-4px;
+}
+.absolute{
+    position:absolute;
+}
+/*tamaños*/
+.small{
+    font-size:12px;
+}
+.normal{
+    font-size:1.2em;
+}
+.medium{
+    font-size:1.5em;
+}
+.big{
+    font-size:3em;
+}
+.bigger{
+    font-size:4em;
+}
+.ultra-big{
+    font-size:7em;
+}

@@ -1,0 +1,59 @@
+%header.moo-grey.big-padding
+  .col-md-10.no-float.center-block
+    .col-md-6.no-padding.inline-block
+      =image_tag "tiendus.png",width:"100" 
+      %h1.white-text.ultra-big.kostic
+        %strong 
+          Vende tus productos a mano a cualquiera
+    .col-md-5.inline-block
+      =image_tag "mono.png"
+.water-blue.white-text.big-padding 
+
+  .col-md-10.no-float.center-block
+    .absolute{style:"bottom:-4.5em;width:100%;left:0px;"}
+      .text-center.big
+        .col-md-3.inline-block
+          .white.metal-text.circle
+            %strong 1
+        .col-md-3.inline-block
+          .white.metal-text.circle
+            %strong 2
+        .col-md-3.inline-block
+          .white.metal-text.circle
+            %strong 3
+    %h2.bigger.kostic.text-center
+      Tus 3 pasos para emprender!
+    %div.text-center.top-space
+      .col-md-3.inline-block.text-left
+        =image_tag "upload-icon.png", class:"col-md-10 inline-block"
+        .top-space
+          %strong.medium
+            Sube tus archivos!
+          %p.white-text.text-justify.small.kostic
+            No importa lo que quieras vender! Siempre y cuando sea original
+            Emprende subiendo tus productos fácilmente!
+      .col-md-3.inline-block.text-left
+        =image_tag "youtube-icon.png", class:"col-md-10 inline-block"
+        .top-space
+          %strong.medium
+            Comparte tu tienda!
+          %p.white-text.text-justify.small.kostic
+            Comparte el enlace de tu tienda a tus amigos para que vean lo que vendes!
+      .col-md-3.inline-block.text-left
+        =image_tag "money-icon.png", class:"col-md-10 inline-block"
+        .top-space
+          %strong.medium
+            Gana dinero!
+          %p.white-text.text-justify.small.kostic
+            Gana dinero, vendiendo tus productos! Recibe dinero en tu cuenta paypal
+.pink.white-text.big-padding.kostic{style:"margin-top:5em;"}
+  .col-md-8.no-float.text-center.center-block{style:"margin-left:10em"}
+    =image_tag "media-icons.png"
+    %p.medium.col-md-11.center-block.no-float.top-space
+      %strong
+        Vende todo tu archivo multimedia
+.top-space.big-padding.bottom-space
+  .col-md-11.col-xs-12.center-block.no-float
+    =form_tag(create_email_path,method: :post,remote:true,id: "emails-form") do
+      =email_field_tag "email",nil,class:"col-xs-12 inline-block text-center landing-form",placeholder:"Escribe aqui tu mail"
+    #email-info.water-blue.white-text.large-padding 
