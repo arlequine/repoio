@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170409195841) do
+ActiveRecord::Schema.define(version: 20170710022212) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "product_id"
@@ -24,6 +24,22 @@ ActiveRecord::Schema.define(version: 20170409195841) do
   end
 
   add_index "attachments", ["product_id"], name: "index_attachments_on_product_id"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "id_product"
+    t.integer  "id_colection"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "colections", force: :cascade do |t|
+    t.string   "colect_name"
+    t.text     "description"
+    t.integer  "id_products"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "in_shopping_carts", force: :cascade do |t|
     t.integer  "product_id"
@@ -74,20 +90,29 @@ ActiveRecord::Schema.define(version: 20170409195841) do
     t.string   "name"
     t.integer  "pricing"
     t.text     "description"
-    t.integer  "user_id"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.string   "img_prod"
+    t.integer  "id_tag"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
-
-  add_index "products", ["user_id"], name: "index_products_on_user_id"
 
   create_table "shopping_carts", force: :cascade do |t|
     t.string   "status"
     t.string   "ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "id_category"
+    t.integer  "id_colection"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "tag_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
